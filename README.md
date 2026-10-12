@@ -31,7 +31,7 @@ Clone o repositório e acesse a pasta do projeto:
 
 ```bash
 git clone https://github.com/SEU-USUARIO/teste-front-end.git
-cd teste-front-end
+cd teste-econverse
 ```
 
 Instale as dependências:
