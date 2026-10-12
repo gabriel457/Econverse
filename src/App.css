@@ -1,0 +1,44 @@
+#root {
+  width: 100%;
+  margin: 0;
+}
+
+main {
+  width: min(1281px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 32px;
+  font-size: 32px;
+}
+
+h2 {
+  margin: 0 0 24px;
+  font-size: 22px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}

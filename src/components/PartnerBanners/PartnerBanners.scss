@@ -1,0 +1,35 @@
+
+.partner-banners {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  width: 100%;
+  margin: 28px 0;
+}
+
+.partner-banner {
+  display: block;
+  min-width: 0;
+  aspect-ratio: 634 / 350;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.partner-banner__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.partner-banner:focus-visible {
+  outline: 2px solid #403bc4;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .partner-banners {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,81 @@
+
+.brands-section {
+  width: 100%;
+  padding: 28px 0;
+  background: #ffffff;
+}
+
+.brands-section > h2 {
+  margin: 0 0 24px;
+  color: #403bc4;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.brands-section__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+.brands-section__item {
+  display: grid;
+  place-items: center;
+
+  width: 84px;
+  height: 84px;
+  flex: 0 0 84px;
+  padding: 8px;
+
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+  border-radius: 50%;
+
+  background: #ffffff;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.08);
+
+  color: #403bc4;
+  text-align: center;
+  text-decoration: none;
+
+  transition: transform 0.2s ease;
+}
+
+.brands-section__item:hover {
+  transform: translateY(-3px);
+}
+
+.brands-section__logo-image {
+  display: block;
+  width: 100%;
+  max-width: 68px;
+  max-height: 32px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .brands-section {
+    padding: 22px 0;
+  }
+
+  .brands-section__list {
+    gap: 12px;
+  }
+
+  .brands-section__item {
+    width: 68px;
+    height: 68px;
+    flex-basis: 68px;
+  }
+
+  .brands-section__logo-image {
+    max-width: 54px;
+    max-height: 28px;
+  }
+}

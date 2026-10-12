@@ -1,0 +1,168 @@
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+
+  padding: 24px 5%;
+  background: #2c204c;
+  color: #ffffff;
+}
+
+.newsletter__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.newsletter__content h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.newsletter__content p {
+  max-width: 340px;
+  margin: 0;
+  color: #e0daed;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.newsletter__form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  align-items: start;
+  gap: 8px;
+
+  flex: 0 1 560px;
+  width: 100%;
+  max-width: 560px;
+  min-width: 0;
+}
+
+.newsletter__field {
+  display: block;
+  min-width: 0;
+}
+
+.newsletter__field--name {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.newsletter__field--email {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.newsletter__field input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 36px;
+  padding: 0 10px;
+
+  border: 1px solid #e5e0ed;
+  border-radius: 5px;
+  outline-offset: 2px;
+
+  background: #ffffff;
+  color: #333333;
+  font: inherit;
+  font-size: 11px;
+}
+
+.newsletter__submit {
+  grid-column: 3;
+  grid-row: 1;
+
+  min-width: 90px;
+  height: 36px;
+  padding: 0 15px;
+
+  border: 0;
+  border-radius: 4px;
+  background: #ffda00;
+  color: #222222;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.newsletter__submit:hover {
+  background: #f1ce00;
+}
+
+.newsletter__terms {
+  display: flex;
+  grid-column: 1;
+  grid-row: 2;
+  align-items: center;
+  gap: 6px;
+
+  min-width: 0;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.newsletter__terms input {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  margin: 0;
+  accent-color: #ffda00;
+  cursor: pointer;
+}
+
+.newsletter__terms span {
+  font-size: 10px;
+}
+
+@media (max-width: 750px) {
+  .newsletter {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+
+  .newsletter__form {
+    flex: 1;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter__form {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .newsletter__field--name {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .newsletter__terms {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .newsletter__field--email {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .newsletter__submit {
+    grid-column: 1;
+    grid-row: 4;
+    width: fit-content;
+  }
+}
